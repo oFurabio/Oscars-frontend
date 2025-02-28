@@ -28,7 +28,7 @@ export function Login() {
     }
 
     return (
-        <div className="flex flex-grow bg-backgroundLight max-w-sm align-middle rounded-3xl px-10 py-8">
+        <div className="flex flex-grow bg-white max-w-sm align-middle rounded-3xl px-10 py-8">
             <form
             className="max-w-[400px] w-full mx-auto" onSubmit={login}
             >

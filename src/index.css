@@ -3,3 +3,8 @@
 body {
     margin: 0;
 }
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url(assets/fonts/futura/FuturaCyrillicLight.woff);
+}

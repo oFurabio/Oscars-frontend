@@ -1,11 +1,14 @@
 import { useContext, useEffect, useState } from "react";
-import Category from "../../../models/Category";
-import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
+import { data, useNavigate } from "react-router-dom";
 import { Search } from "../../../services/Service";
+
+import Category from "../../../models/Category";
+import CategoryBlock from "../CategoryBlock/CategoryBlock";
 
 function CategoryList() {
     const [category, setCategory] = useState<Category[]>([]);
+    const [isLoading, setIsLoading ] = useState<boolean>(true);
 
     const navigate = useNavigate();
 
@@ -13,6 +16,7 @@ function CategoryList() {
     const token = user.token;
 
     async function searchCategory() {
+        setIsLoading(true);
         try {
             await Search("/categories", setCategory, {
                 headers: { Authorization: token },
@@ -22,6 +26,8 @@ function CategoryList() {
                 alert("Error!")
                 handleLogout();
             }
+        } finally {
+            setIsLoading(false);
         }
     }
 
@@ -38,20 +44,31 @@ function CategoryList() {
 
     return (
         <>
-            <div className="font-bold container z-0 w-[80vw] px-[1vw] mx-auto my-0 grid grid-cols-3 gap-4">
-                <div className="col-span-3 flex justify-between items-center mt-8 mb-10">
-                    <div className="px-4 py-2 text-2xl text-white bg-white hover:[#0F9D84]"></div>
-                        <h1 className="text-center text-6xl text-[#DB5413] font-bold">
-                            Categorias
-                        </h1>
+            {isLoading ? (
+                <div className="flex text-white">
+                    <img
+                    src="https://www.oscars.org/themes/custom/ampas_cms/logo2x.png"
+                    alt="Carregando"
+                    className="w-40 h-40 object-contain animate-pulse"
+                    />
+                </div>
+            ) : (
+                <div>
+                    <div className="flex pl-10 my-5">
+                        <h1 className="text-white font-thin mr-3 text-6xl">2025</h1>
+                        <h1 className="text-[#b8943c] font-bold mx-3 text-6xl">INDICADOS</h1>
                     </div>
 
-                    {category.length === 0}
-                    {category.map((category) => (
-                        <>
-                        </>
-                    ))}
-            </div>
+                    <div className="grid grid-cols-8 gap-10 px-10 pb-10">
+                        {category.length === 0}
+                        {category.map((category) => (
+                            <>
+                                <CategoryBlock key={category.id} category={category} />
+                            </>
+                        ))}
+                    </div>
+                </div>
+            )}
         </>
     );
 }

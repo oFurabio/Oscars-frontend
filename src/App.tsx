@@ -10,21 +10,23 @@ import CategoryList from './components/categories/listCategories/CategoryList'
 
 function App() {
   return (
-    <div className='flex flex-col min-h-screen'>
-      <AuthProvider>
-        <BrowserRouter>
-          <Navbar />
-          <div className='flex flex-grow items-center justify-center mt-7'>
-            <Routes>
-              <Route path='/home' element={<Home />} />
-              <Route path='/' element={<Home />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/categories' element={<CategoryList />} />
-            </Routes>
-          </div>
-          <Footer />
-        </BrowserRouter>
-      </AuthProvider >
+    <div className='bg-[url(assets\images\wallpaper.png)]'>
+      <div className='flex flex-col min-h-screen bg-black/90'>
+        <AuthProvider>
+          <BrowserRouter>
+            <Navbar />
+            <div className='flex flex-grow items-center justify-center my-7'>
+              <Routes>
+                <Route path='/home' element={<Home />} />
+                <Route path='/' element={<Home />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/categories' element={<CategoryList />} />
+              </Routes>
+            </div>
+            <Footer />
+          </BrowserRouter>
+        </AuthProvider>
+      </div>
     </div>
   );
 }
