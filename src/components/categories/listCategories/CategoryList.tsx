@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
-import { data, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Search } from "../../../services/Service";
 
 import Category from "../../../models/Category";
@@ -9,8 +9,6 @@ import CategoryBlock from "../CategoryBlock/CategoryBlock";
 function CategoryList() {
     const [category, setCategory] = useState<Category[]>([]);
     const [isLoading, setIsLoading ] = useState<boolean>(true);
-
-    const navigate = useNavigate();
 
     const { user, handleLogout } = useContext(AuthContext);
     const token = user.token;
