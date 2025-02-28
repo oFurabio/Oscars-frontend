@@ -1,25 +1,31 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Footer from './components/footer/Footer'
+import { AuthProvider } from './contexts/AuthContext'
+
 import Navbar from './components/navbar/Navbar'
 import Home from './pages/home/Home'
-import './App.css'
+import Footer from './components/footer/Footer'
+import Login from './pages/login/Login'
+import CategoryList from './components/categories/listCategories/CategoryList'
 
 
 function App() {
-
   return (
-    <>
-      <BrowserRouter>
-        <Navbar />
-        <div className='min-h-[80vh]'>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/home' element={<Home />} />
-          </Routes>
-        </div>
-        <Footer />
-      </BrowserRouter>
-    </>
+    <div className='flex flex-col min-h-screen'>
+      <AuthProvider>
+        <BrowserRouter>
+          <Navbar />
+          <div className='flex flex-grow items-center justify-center mt-7'>
+            <Routes>
+              <Route path='/home' element={<Home />} />
+              <Route path='/' element={<Home />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/categories' element={<CategoryList />} />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </AuthProvider >
+    </div>
   );
 }
 
