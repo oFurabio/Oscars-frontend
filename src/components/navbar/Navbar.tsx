@@ -1,10 +1,6 @@
-import { UserCircle } from "@phosphor-icons/react"
-import { useContext } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
 function Navbar() {
-    const navigate = useNavigate();
-
     return (
         <div className='bg-[#171e27] text-white w-full h-[12vh] px-6 py-1 bg-backgroundHeader flex justify-center'>
             <div className="w-full flex justify-between text-lg">

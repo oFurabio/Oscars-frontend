@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
 
 function Home() {
-    const navigate = useNavigate();
     return (
         <>
             <div className="grid grid-cols-2 gap-10 border-2 border-white h-[60vh] w-[80vw]">
