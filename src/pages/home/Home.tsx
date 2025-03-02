@@ -3,16 +3,29 @@ import { Link } from "react-router-dom"
 function Home() {
     return (
         <>
-            <div className="grid grid-cols-2 gap-10 border-2 border-white h-[60vh] w-[80vw]">
-                <div className="border-2 border-red-500">
-                    <div className="text-white flex flex-col justify-center h-full w-full pl-5 border-2 border-red-500">
-                        <h1 className="mb-5 text-5xl">VOTE</h1>
-                        <h2 className="mb-5">VOTE IN 2025 NOMINEES</h2>
-                        <div className="mb-5 flex flex-row gap-10">
-                            <h3 className="bg-amber-500">VOTE</h3>
-                            <Link to="/categories"
-                                className="transition-colors duration-200 border-2 border-amber-500 bg-[#1d2632]/15 hover:cursor-pointer hover:border-amber-500/50 hover:bg-[#1d2632]">
-                                VIEW ALL CATEGORIES
+            <div className="grid grid-cols-2 gap-1 h-[85vh] w-full">
+                <div className="">
+                    <div className="flex flex-col justify-center h-full w-full pl-40">
+                        <h1 className="mb-5 sm:text-4xl lg:text-8xl font-[Futura PT] font-bold text-[#b8943c]">INDICADOS</h1>
+                        <h2 className="mb-5 sm:text-2xl lg:text-4xl font-[Futura PT] font-bold text-gray-300">VEJA E VOTE NOS INDICADOS DE 2025</h2>
+                        <div className="mb-5 flex md:flex-col sm:flex-col lg:flex-row gap-10">
+                            <Link to="/nominees/category/1">
+                                <div className="group relative inline-block">
+                                    <div className="relative px-6 py-2 text-center uppercase font-bold text-black tracking-widest cursor-pointer border-2 border-transparent duration-200 bg-[#b8943c] hover:bg-[#D5AC46]">
+                                        <span className="absolute top-0 right-0 w-10 h-10 border-t-2 border-r-2 border-[#ffffd4] transition-all duration-500 group-hover:w-full group-hover:h-full"></span>
+                                        <span className="absolute bottom-0 left-0 w-10 h-10 border-b-2 border-l-2 border-[#ffffd4] transition-all duration-500 group-hover:w-full group-hover:h-full"></span>
+                                        Votar
+                                    </div>
+                                </div>
+                            </Link>
+                            <Link to="/categories">
+                            <div className="group relative inline-block">
+                                    <div className="relative px-6 py-2 text-center uppercase font-bold text-white tracking-widest cursor-pointer border-2 border-transparent duration-200 bg-[#1d2632]/10 hover:bg-[#1d2632]">
+                                        <span className="absolute top-0 right-0 w-10 h-10 border-t-2 border-r-2 border-[#ffffd4] transition-all duration-500 group-hover:w-full group-hover:h-full"></span>
+                                        <span className="absolute bottom-0 left-0 w-10 h-10 border-b-2 border-l-2 border-[#ffffd4] transition-all duration-500 group-hover:w-full group-hover:h-full"></span>
+                                        Ver Categorias
+                                    </div>
+                                </div>
                             </Link>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ import Home from './pages/home/Home'
 import Footer from './components/footer/Footer'
 import Login from './pages/login/Login'
 import CategoryList from './components/categories/listCategories/CategoryList'
+import NomineeList from './components/nominees/nomineeList/NomineeList'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                 <Route path='/' element={<Home />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/categories' element={<CategoryList />} />
+                <Route path='/nominees/category/:id' element={<NomineeList />} />
               </Routes>
             </div>
             <Footer />

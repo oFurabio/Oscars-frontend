@@ -3,7 +3,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import { Search } from "../../../services/Service";
 
 import Category from "../../../models/Category";
-import CategoryBlock from "../CategoryBlock/CategoryBlock";
+import CategoryBlock from "../categoryBlock/CategoryBlock";
 
 function CategoryList() {
     const [category, setCategory] = useState<Category[]>([]);
@@ -52,8 +52,7 @@ function CategoryList() {
             ) : (
                 <div>
                     <div className="flex pl-10 my-5">
-                        <h1 className="text-white font-thin mr-3 text-6xl">2025</h1>
-                        <h1 className="text-[#b8943c] font-bold mx-3 text-6xl">INDICADOS</h1>
+                        <h1 className="text-[#b8943c] font-normal text-6xl uppercase font-[Futura PT]">Categorias</h1>
                     </div>
 
                     <div className="grid grid-cols-8 gap-10 px-10 pb-10">
