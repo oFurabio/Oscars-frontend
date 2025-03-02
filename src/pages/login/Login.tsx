@@ -28,7 +28,7 @@ export function Login() {
     }
 
     return (
-        <div className="flex flex-grow bg-white max-w-sm align-middle rounded-3xl px-10 py-8">
+        <div className="flex flex-grow bg-gray-200/75 max-w-sm align-middle rounded-3xl px-10 py-8">
             <form
             className="max-w-[400px] w-full mx-auto" onSubmit={login}
             >
@@ -78,7 +78,7 @@ export function Login() {
                 <div className="flex justify-center">
                     <button
                     type="submit"
-                    className="text-3xl text-white pb-1 font-bold rounded-3xl pt-[5px] px-4 bg-[#13DBB7] hover:bg-[#0F9D84]"
+                    className="text-3xl text-gray-200 pb-1 font-bold rounded-3xl pt-[5px] px-4 bg-[#13DBB7] hover:bg-[#0F9D84]"
                     >
                         {isLoading ? (
                             <p>Carregando</p>

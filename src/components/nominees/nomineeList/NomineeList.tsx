@@ -56,7 +56,7 @@ function NomineeList() {
                         <h1 className="uppercase">Indicados</h1>
                     </div>
 
-                    <div className="grid grid-cols-5 gap-10 px-10 pb-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 px-10 pb-10">
                         {nominee.map((nominee) => (
                             <NomineeBlock key={nominee.id} nominee={nominee} />
                         ))}

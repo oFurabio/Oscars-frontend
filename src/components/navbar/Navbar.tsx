@@ -13,8 +13,10 @@ function Navbar() {
                         />
                     </Link>
                 </div>
-                    <h1 className="self-center uppercase font-extrabold text-5xl text-[#b8943c]">Oscar 2025</h1>
-                <Link to="/login" className="uppercase self-center text-5xl ">
+                <h1 className="self-center uppercase font-extrabold text-base md:text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl text-[#b8943c]">
+                    Oscar 2025
+                </h1>
+                <Link to="/login" className="uppercase self-center text-base md:text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl ">
                     Entrar
                 </Link>
             </div>

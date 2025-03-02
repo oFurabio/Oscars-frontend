@@ -3,7 +3,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import { Search } from "../../../services/Service";
 
 import Category from "../../../models/Category";
-import CategoryBlock from "../CategoryBlock/CategoryBlock";
+import CategoryBlock from "../categoryBlock/CategoryBlock";
 
 function CategoryList() {
     const [category, setCategory] = useState<Category[]>([]);
@@ -55,12 +55,10 @@ function CategoryList() {
                         <h1 className="text-[#b8943c] font-normal text-6xl uppercase font-[Futura PT]">Categorias</h1>
                     </div>
 
-                    <div className="grid grid-cols-8 gap-10 px-10 pb-10">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-10 px-10 pb-10">
                         {category.length === 0}
                         {category.map((category) => (
-                            <>
                                 <CategoryBlock key={category.id} category={category} />
-                            </>
                         ))}
                     </div>
                 </div>

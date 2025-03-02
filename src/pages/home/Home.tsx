@@ -6,9 +6,9 @@ function Home() {
             <div className="grid grid-cols-2 gap-1 h-[85vh] w-full">
                 <div className="">
                     <div className="flex flex-col justify-center h-full w-full pl-40">
-                        <h1 className="mb-5 sm:text-4xl lg:text-8xl font-[Futura PT] font-bold text-[#b8943c]">INDICADOS</h1>
-                        <h2 className="mb-5 sm:text-2xl lg:text-4xl font-[Futura PT] font-bold text-gray-300">VEJA E VOTE NOS INDICADOS DE 2025</h2>
-                        <div className="mb-5 flex md:flex-col sm:flex-col lg:flex-row gap-10">
+                        <h1 className="mb-5 text-4xl xl:text-8xl font-[Futura PT] font-bold text-[#b8943c]">INDICADOS</h1>
+                        <h2 className="mb-5 text-2xl xl:text-4xl font-[Futura PT] font-bold text-gray-300">VEJA E VOTE NOS INDICADOS DE 2025</h2>
+                        <div className="mb-5 flex flex-col lg:flex-row gap-10">
                             <Link to="/nominees/category/1">
                                 <div className="group relative inline-block">
                                     <div className="relative px-6 py-2 text-center uppercase font-bold text-black tracking-widest cursor-pointer border-2 border-transparent duration-200 bg-[#b8943c] hover:bg-[#D5AC46]">

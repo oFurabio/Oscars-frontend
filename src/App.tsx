@@ -11,7 +11,7 @@ import NomineeList from './components/nominees/nomineeList/NomineeList'
 
 function App() {
   return (
-    <div className='bg-[url(assets\images\wallpaper.png)]'>
+    <div className='bg-[url("/wallpaper.png")]'>
       <div className='flex flex-col min-h-screen bg-black/90'>
         <AuthProvider>
           <BrowserRouter>
