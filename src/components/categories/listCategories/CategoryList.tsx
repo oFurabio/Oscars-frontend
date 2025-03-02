@@ -3,7 +3,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import { Search } from "../../../services/Service";
 
 import Category from "../../../models/Category";
-import CategoryBlock from "../categoryBlock/CategoryBlock";
+import CategoryBlock from "../CategoryBlock/CategoryBlock";
 
 function CategoryList() {
     const [category, setCategory] = useState<Category[]>([]);
