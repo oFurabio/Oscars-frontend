@@ -7,7 +7,7 @@ import CategoryBlock from "../categoryBlock/CategoryBlock";
 
 function CategoryList() {
     const [category, setCategory] = useState<Category[]>([]);
-    const [isLoading, setIsLoading ] = useState<boolean>(true);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     const { user, handleLogout } = useContext(AuthContext);
     const token = user.token;
@@ -44,9 +44,9 @@ function CategoryList() {
             {isLoading ? (
                 <div className="flex text-white">
                     <img
-                    src="https://www.oscars.org/themes/custom/ampas_cms/logo2x.png"
-                    alt="Carregando"
-                    className="w-40 h-40 object-contain animate-pulse"
+                        src="https://www.oscars.org/themes/custom/ampas_cms/logo2x.png"
+                        alt="Carregando"
+                        className="w-40 h-40 object-contain animate-pulse"
                     />
                 </div>
             ) : (
