@@ -20,13 +20,13 @@ function NomineeBlock({ nominee }: nomineeBlockProps) {
                         <img
                             src={nominee.photoUrl}
                             alt={`Foto de ${nominee.name} em ${nominee.info}`}
-                            className="w-full h-[400px] object-cover group-hover:brightness-75 transition-all duration-300"
+                            className="w-[275px] h-[400px] object-cover group-hover:brightness-75 transition-all duration-300"
                         />
                     ) : (
                         <img
                             src={nominee.photoUrl}
                             alt={`Foto de ${nominee.name} em ${nominee.info}`}
-                            className="max-w-[275px] h-[400px] object-cover group-hover:brightness-75 transition-all duration-300"
+                            className="w-[275px] h-[400px] grayscale object-cover group-hover:brightness-75 transition-all duration-300"
                         />
                     )}
                 </>
@@ -36,8 +36,8 @@ function NomineeBlock({ nominee }: nomineeBlockProps) {
                     </span>
                 </div>
             </div>
-            <h1 className="text-2xl mb-2 font-[Futura PT] uppercase font-bold">{nominee.name}</h1>
-            <p className="text-lg mt-2 font-[Times] capitalize font-extralight">{nominee.info}</p>
+            <h1 className="text-2xl h-[50px] font-[Futura PT] uppercase font-bold">{nominee.name}</h1>
+            <p className="text-lg h-[90px] font-[Times] capitalize font-extralight">{nominee.info}</p>
         </div>
     )
 }
