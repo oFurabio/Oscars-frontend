@@ -47,7 +47,7 @@ function NomineeList() {
             ) : (
                 <div className="flex flex-col text-xl text-white font-[Futura PT]">
                     <div className="flex flex-row pl-10 my-5 gap-1 uppercase">
-                        <h1 className="text-[#b8943c] font-thin text-7xl">Melhor {nominee[0]?.categories.find(c => c.id === Number(id))?.title}</h1>
+                        <h1 className="text-[#b8943c] font-thin text-7xl">Oscar de {nominee[0]?.categories.find(c => c.id === Number(id))?.title}</h1>
                     </div>
 
                     {nominee.length === 0 && <p className="text-center text-white">Nenhum nomeado encontrado!</p>}
