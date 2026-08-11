@@ -17,7 +17,7 @@ function Footer() {
                         <a href="https://github.com/oFurabio" target='_blank'>
                             <GithubLogo size={48} weight='bold' className='hover:scale-110 hover:text-[#ffffff]/50 duration-150'/>
                         </a>
-                        <a href="https://flaviofarias.vercel.app/" target='_blank'>
+                        <a href="https://ofurabio.vercel.app/" target='_blank'>
                             <DevToLogo size={48} weight='bold' className='hover:scale-110 hover:text-[#ffffff]/50 duration-150'/>
                         </a>
                         <a href="mailto:fs.flaviosilv4@gmail.com" target='_blank'>
