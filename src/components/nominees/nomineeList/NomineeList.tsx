@@ -14,6 +14,7 @@ function NomineeList() {
 
     async function searchNominee(id: number) {
         setIsLoading(true);
+        
         try {
             await Search(`/nominees/category/${id}`, setNominee, {
                 headers: { Authorization: token }
@@ -34,6 +35,8 @@ function NomineeList() {
         }
     }, [id]);
 
+    const hasWinner = nominee.some((item) => item.winner);
+
     return (
         <>
             {isLoading ? (
@@ -47,18 +50,31 @@ function NomineeList() {
             ) : (
                 <div className="flex flex-col text-xl text-white font-[Futura PT]">
                     <div className="flex flex-row pl-10 my-5 gap-1 uppercase">
-                        <h1 className="text-[#b8943c] font-thin text-7xl">Oscar de {nominee[0]?.categories.find(c => c.id === Number(id))?.title}</h1>
+                        <h1 className="text-[#b8943c] font-thin text-7xl">
+                            Oscar de Melhor{" "}
+                            {nominee[0]?.categories.find(
+                                (c) => c.id === Number(id)
+                            )?.title}
+                        </h1>
                     </div>
 
-                    {nominee.length === 0 && <p className="text-center text-white">Nenhum nomeado encontrado!</p>}
+                    {nominee.length === 0 && (
+                        <p className="text-center text-white">
+                            Nenhum nomeado encontrado!
+                        </p>
+                    )}
                     
                     <div className="pl-10">
                         <h1 className="uppercase">Indicados</h1>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 px-10 pb-10">
-                        {nominee.map((nominee) => (
-                            <NomineeBlock key={nominee.id} nominee={nominee} />
+                        {nominee.map((item) => (
+                            <NomineeBlock
+                                key={item.id}
+                                nominee={item}
+                                hasWinner={hasWinner}
+                            />
                         ))}
                     </div>
                 </div>
