@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom"
 
 function Home() {
+    let data = new Date().getFullYear()
+
     return (
         <>
             <div className="grid grid-cols-2 gap-1 h-[85vh] w-full">
                 <div className="">
-                    <div className="flex flex-col justify-center h-full w-full pl-40">
+                    <div className="flex flex-col justify-center h-full w-full pl-8 xl:pl-40">
                         <h1 className="mb-5 text-4xl xl:text-8xl font-[Futura PT] font-bold text-[#b8943c]">INDICADOS</h1>
-                        <h2 className="mb-5 text-2xl xl:text-4xl font-[Futura PT] font-bold text-gray-300">VEJA E VOTE NOS INDICADOS DE 2025</h2>
+                        <h2 className="mb-5 text-2xl xl:text-4xl font-[Futura PT] font-bold text-gray-300">VEJA E VOTE NOS INDICADOS DE {data}</h2>
                         <div className="mb-5 flex flex-col lg:flex-row gap-10">
                             <Link to="/nominees/category/1">
                                 <div className="group relative inline-block">

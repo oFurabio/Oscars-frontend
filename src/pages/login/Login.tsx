@@ -28,57 +28,57 @@ export function Login() {
     }
 
     return (
-        <div className="flex flex-grow bg-gray-200/75 max-w-sm align-middle rounded-3xl px-10 py-8">
+        <div className="flex flex-grow bg-gray-200/95 max-w-sm align-middle rounded-3xl px-4 md:px-8 py-8 mx-8">
             <form
-            className="max-w-[400px] w-full mx-auto" onSubmit={login}
+                className="max-w-[400px] w-full mx-auto" onSubmit={login}
             >
-                <div className="flex justify-center p-6">
-                    <img 
-                    src="https://www.oscars.org/themes/custom/ampas_cms/logo2x.png"
-                    alt="Ícone"
-                    className="max-h-20"
-                    />
-                </div>
-
-                <div className="flex flex-col pb-6">
-                    <label 
-                    htmlFor="email"
-                    className="text-xl text-primary font-bold pb-2 pl-5"
-                    >
-                        E-mail
-                    </label>
-                    <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    className="p-1 border border-gray-300 rounded-2xl px-3 focus:outline-none"
-                    placeholder="Email@example.com"
-                    value={userLogin.email}
-                    onChange={(e: ChangeEvent<HTMLInputElement>) => updateState(e)}
+                <div className="flex justify-center pb-8">
+                    <img
+                        src="https://www.oscars.org/themes/custom/ampas_cms/logo2x.png"
+                        alt="Ícone"
+                        className="max-h-20"
                     />
                 </div>
 
                 <div className="flex flex-col pb-6">
                     <label
-                    htmlFor="password"
-                    className="text-xl text-primary font-bold pb-2 pl-5"
+                        htmlFor="email"
+                        className="text-xl text-primary font-bold pb-2 pl-5"
+                    >
+                        E-mail
+                    </label>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        className="p-1 border border-gray-500 font-serif rounded-2xl px-3 focus:outline-none"
+                        placeholder="Email@example.com"
+                        value={userLogin.email}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => updateState(e)}
+                    />
+                </div>
+
+                <div className="flex flex-col pb-6">
+                    <label
+                        htmlFor="password"
+                        className="text-xl text-primary font-bold pb-2 pl-5"
                     >Senha
                     </label>
                     <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    className="p-1 border border-gray-300 rounded-2xl px-3 focus:outline-none"
-                    placeholder="Digite a senha"
-                    value={userLogin.password}
-                    onChange={(e: ChangeEvent<HTMLInputElement>) => updateState(e)}
+                        type="password"
+                        id="password"
+                        name="password"
+                        className="p-1 border border-gray-500 font-serif rounded-2xl px-3 focus:outline-none"
+                        placeholder="Digite a senha"
+                        value={userLogin.password}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => updateState(e)}
                     />
                 </div>
 
                 <div className="flex justify-center">
                     <button
-                    type="submit"
-                    className="text-3xl text-gray-200 pb-1 font-bold rounded-3xl pt-[5px] px-4 bg-[#13DBB7] hover:bg-[#0F9D84]"
+                        type="submit"
+                        className="text-3xl text-gray-200 pb-1 font-bold rounded-3xl pt-[5px] px-4 bg-[#13DBB7] hover:bg-[#0F9D84]"
                     >
                         {isLoading ? (
                             <p>Carregando</p>
