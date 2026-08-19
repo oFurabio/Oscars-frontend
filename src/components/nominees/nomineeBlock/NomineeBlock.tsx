@@ -19,7 +19,7 @@ function NomineeBlock({ nominee, hasWinner }: nomineeBlockProps) {
                 />
 
                 <span className="absolute bottom-0 left-0 right-0 font-extrabold text-black text-center uppercase bg-[#b8943c]/75 tracking-widest font-[Futura PT] px-2 py-4">
-                    Faça Login para votar
+                    Faça Login
                 </span>
             </div>
 
